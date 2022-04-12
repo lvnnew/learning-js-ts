@@ -11,9 +11,9 @@ const Vladimir = {
 // Vladimir.age = 25;
 
 const app = () => {
-  log.info(typeof Vladimir.age, '=', Vladimir.age);
-  log.info(typeof Vladimir.gender, '=', Vladimir.gender);
-  log.info(typeof Vladimir.maritalStatus, '=', Vladimir.maritalStatus);
+  log.info(typeof Vladimir.age, Vladimir.age);
+  log.info(typeof Vladimir.gender, Vladimir.gender);
+  log.info(typeof Vladimir.maritalStatus, Vladimir.maritalStatus);
 };
 
 app();
