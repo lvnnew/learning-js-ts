@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import {log} from './log';
+export {};
 
 // yarn ts-node src/functionsTask2.ts
 
@@ -14,8 +14,3 @@ function printStr(xxx = 'печенье') {
 
 printStr();
 
-const app = async () => {
-  log.info();
-};
-
-app();

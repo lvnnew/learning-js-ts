@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable prefer-const */
-import {log} from './log';
+export {};
 
 // yarn ts-node src/functionsTask3.ts
 
@@ -16,8 +16,3 @@ function printStr() {
 
 printStr();
 
-const app = async () => {
-  log.info();
-};
-
-app();
