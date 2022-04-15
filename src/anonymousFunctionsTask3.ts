@@ -4,8 +4,8 @@ export {};
 
 // yarn ts-node src/anonymousFunctionsTask3.ts
 
-const printStr = (arg: string) => {
+const printStr = (arg = 'Параметр') => {
   console.log(arg, 'Но это не точно');
 };
 
-printStr('Параметр');
+printStr();
