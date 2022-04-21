@@ -17,10 +17,8 @@ export {};
 */
 
 const object1 = {
-  getPokemon: () => {
-    for (const result of object1.pokemon) {
-      console.log(result, 'я выбираю тебя!');
-    }
+  getPokemon: (n: number) => {
+    console.log(object1.pokemon[n], 'я выбираю тебя!');
   },
   pokemon: [
     'Пикачу',
@@ -31,5 +29,5 @@ const object1 = {
   ],
 };
 
-object1.getPokemon();
+object1.getPokemon(2);
 
