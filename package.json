@@ -9,6 +9,7 @@
     "ts-node": "ts-node --files"
   },
   "dependencies": {
+    "chai": "^4.3.6",
     "jest-extended": "^0.11.5",
     "lodash": "^4.17.20",
     "tslog": "^3.1.0",
