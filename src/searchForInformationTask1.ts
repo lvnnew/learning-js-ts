@@ -10,8 +10,11 @@ export {};
 */
 
 function printInt(a: number, b: number) {
-  for (let i = 0; i <= a ** b; i++) {
-    console.log(i);
+  let result = a;
+  console.log(result);
+  for (let i = 0; i < b; i++) {
+    result *= a;
+    console.log(result);
   }
 }
 
