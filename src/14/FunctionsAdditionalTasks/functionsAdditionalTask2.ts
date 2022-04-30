@@ -9,9 +9,7 @@ export {};
 Написать анонимную стрелочную функцию, которая вернет случаное число. Результат функции присвоить в контанту, вывести контанту в консоль
 */
 
-const randomNumber = (max: number) => {
-  const randNum = Math.floor(Math.random() * max);
-  console.log(randNum);
-};
-
-randomNumber(10);
+function getRandom() {
+  return console.log(Math.random());
+}
+getRandom();
