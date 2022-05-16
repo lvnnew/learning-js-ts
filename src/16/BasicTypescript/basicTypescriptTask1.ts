@@ -13,9 +13,9 @@ export {};
 */
 
 enum Colors {
-    Green = 5,
-    Yellow = 10,
-    Blue = 31,
+    Green = 'Green',
+    Yellow = 'Yellow',
+    Blue = 'Blue',
 }
 
 console.log('Значение Green -', Colors.Green, ',', 'Значение Blue -', Colors.Blue);

@@ -28,9 +28,10 @@ const person: SayName = {
   lastName: 'Ivanov',
   name: 'Вася',
   sayHello: (name: string) => {
-    return name;
+    return 'Hello, ' + name + '!';
   },
 };
 
 console.log(person);
-console.log('Hello, ' + person.sayHello('Бог войны') + '!');
+
+console.log(person.sayHello('Бог войны'));

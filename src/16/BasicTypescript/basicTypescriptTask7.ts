@@ -15,10 +15,8 @@ export {};
 
 type Op = (x:string | number) => string;
 
-const printStr: Op = function (a: any) {
-  a.toString();
-
-  return a;
+const printStr: Op = (a: string | number) => {
+  return a.toString();
 };
 
 console.log(printStr(555));

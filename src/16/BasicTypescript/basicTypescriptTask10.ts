@@ -16,7 +16,8 @@ export {};
 */
 
 enum Fruit {
-    Apple = '5 Apples'
+    Apple = 'Apple',
+    Orange = 'Orange',
 }
 
 interface FruitStore {
@@ -33,7 +34,6 @@ const frutti: FruitStore = {
 
 console.log(frutti);
 
-(Fruit as any).Apple = '10 Apples';
-frutti.assortment = Fruit.Apple;
+frutti.assortment = Fruit.Orange;
 
 console.log(frutti);
