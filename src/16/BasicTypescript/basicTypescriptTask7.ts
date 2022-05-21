@@ -15,7 +15,7 @@ export {};
 
 type Op = (x:string | number) => string;
 
-const printStr: Op = (a: string | number) => {
+const printStr: Op = (a) => {
   return a.toString();
 };
 
