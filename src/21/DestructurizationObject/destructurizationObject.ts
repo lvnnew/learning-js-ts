@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-unused-properties */
 /* eslint-disable no-console */
 
 // yarn ts-node src/21//DestructurizationObject/destructurizationObject.ts
