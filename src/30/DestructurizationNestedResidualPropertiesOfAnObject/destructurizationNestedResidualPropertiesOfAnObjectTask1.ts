@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 /* eslint-disable no-console */
 // yarn ts-node src/30/DestructurizationNestedResidualPropertiesOfAnObject/destructurizationNestedResidualPropertiesOfAnObjectTask1.ts
 
@@ -11,7 +11,7 @@ Video
       Вывести в консоль по-отдельности все константы duration, width, restPreview, restVideo;
 */
 
-const video = {
+const videoN = {
   duration: '23.59',
   preview: {
     height: 320,
@@ -21,7 +21,7 @@ const video = {
   title: 'Видео с котятами',
 };
 
-const {duration, preview: {width, ...restPreview}, ...restVideo} = video;
+const {duration, preview: {width, ...restPreview}, ...restVideo} = videoN;
 
 console.log(duration, width, restPreview, restVideo);
 
@@ -46,9 +46,9 @@ const locationN = {
     }
 };
 
-const {street, coordinates: {metersAboveSeaLevel, ...restCoordinates}} = locationN;
+const {street, coordinates: {metersAboveSeaLevel, ...restCoordinates}, ...restLocation} = locationN;
 
-console.log(street, metersAboveSeaLevel, restCoordinates);
+console.log(street, metersAboveSeaLevel, restCoordinates, restLocation);
 
 /*
 Application (приложение)
