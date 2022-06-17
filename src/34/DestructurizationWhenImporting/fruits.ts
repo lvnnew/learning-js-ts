@@ -1,11 +1,11 @@
-export const apple = {
-  translation: 'Яблоко',
-};
+export const apple = [
+  'Яблоко',
+];
 
-export const orange = {
-  translation: 'Апелсин',
-};
+export const orange = [
+  'Апелсин',
+];
 
-export const banana = {
-  translation: 'Банан',
-};
+export const banana = [
+  'Банан',
+];

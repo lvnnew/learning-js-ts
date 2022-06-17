@@ -1,14 +1,7 @@
 /* eslint-disable no-console */
-/* eslint-disable import/no-commonjs */
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
-// import {ivanov, sidorov: {name}, , kusakina: {name: accountant}} from './users';
-
-// сделал через require, потому что с импортом возникли некоторые сложности
-const {ivanov, sidorov: {name}, kusakina: {name: accountant}} = require('./users');
-const {apple: {translation: apple}, orange: {translation: orange}, banana: {translation: banana}} = require('./fruits');
-const {harryPotter1: {title: titleOne}, harryPotter2: {title: titleTwo}, harryPotter3: {title: titleThree}, harryPotter4: {title: titleFour}, harryPotter5: {title: titleFive}, harryPotter6: {title: titleSix}, harryPotter7: {title: titleSeven}} = require('./books');
+import {ivanov as president, sidorov as serviceman, kusakina as accountant} from './users';
+import {apple, orange, banana} from './fruits';
+import {firstHarryPotterBook as firstBook, secondHarryPotterBook as secondBook, thirdHarryPotterBook as thirdBook} from './books';
 
 // yarn ts-node src/34/DestructurizationWhenImporting/destructurizationWhenImporting.ts
 
@@ -32,19 +25,15 @@ export const kusakina = {
   age: 27,
 };
 
-Заимпортить из файла users.ts:
+Заимпортить из файла users.ts всех юзеров через деструктуризацию;
 
-      Константу ivanov;
-      Поле name из объекта sidorov;
-      Поле name из объекта kusakina, положив это поле в константу accountant;
+import {ivanov as president, sidorov as serviceman, kusakina as accountant} from './users';
 
-import {ivanov, sidorov: {name}, , kusakina: {name: accountant}} from './users';
-
-Вывести в консоль все 3 полученные константы: ivanov, name, accountant;
+Вывести в консоль все 3 полученные константы: president, serviceman, accountant;
 
 */
 
-console.log(ivanov, name, accountant);
+console.log(president, serviceman, accountant);
 
 /*
 
@@ -62,10 +51,10 @@ console.log(apple, orange, banana);
 
 Books
 
-      Создать файл books.ts, который будет экспортить константы с книгами. В каждой константе должен лежать объект с полями title, description;
-      Заимпортить из файла books.ts названия книг, вывети их в консоль;
-      Обрати внимание что, так как, мы вытаскиваем одинаковые поля из объектов, для избежания конфликтов имена, при деструктуризации, нужно будет пеерименоват.
-      Деструктуризацию с переименованием мы уже проходили;
+      Создать файл books.ts, который будет экспортить константы с книгами.
+      В каждой константе должен лежать объект с полями title, description;
+      Заимпортить из файла books.ts книги через деструктуризацию.
+      При импорте переименовать константы. Вывести их в консоль;
 */
 
-console.log(titleOne, titleTwo, titleThree, titleFour, titleFive, titleSix, titleSeven);
+console.log(firstBook, secondBook, thirdBook);
