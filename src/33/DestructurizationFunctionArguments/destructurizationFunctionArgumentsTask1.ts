@@ -199,8 +199,8 @@ const userStoryTwo: User = {
   account: 23,
 };
 
-const printReport = ({firstName: userOne = 'Дима', LastName: userTwo = 'Жора'}: User, amount: number) => {
-  console.log(`${userOne} переводит ${amount} кокосовых скорлупок пользователю ${userTwo}`);
+const printReport = ({firstName = 'Дима', LastName = 'Жора'}: User, amount: number) => {
+  console.log(`${firstName} переводит ${amount} кокосовых скорлупок пользователю ${LastName}`);
 };
 
 printReport(userStoryOne, 28);
