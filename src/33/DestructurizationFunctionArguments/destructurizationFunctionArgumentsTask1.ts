@@ -172,7 +172,8 @@ interface User {
 }
 
     Создать функцию с тремя аргументами. Первые 2 аргумента типа User и третий числовой аргумент amount;
-    Выведет в консоль строку типа _Имя_первого_пользователя_ (_Счет_первого_пользователя_) переводит _amount_ кокосовых скорлупок пользователю _Имя_второго_пользователя_ (_Счет_второго_пользователя_).
+    Выведет в консоль строку типа _Имя_первого_пользователя_ (_Счет_первого_пользователя_)
+    переводит _amount_ кокосовых скорлупок пользователю _Имя_второго_пользователя_ (_Счет_второго_пользователя_).
     Пример вывода: `Сидоров (345789) переводит 8 кокосовых скорлупок пользователю Петров (0980987);
     Нужные поля функция должна извлеч из объектов через деструктуризацию (сразу в агрументах).
     Вытаскиваться должны только те поля, которые потребуются для работы функции.
@@ -189,19 +190,18 @@ interface User {
     account: number;
 }
 
-const userStoryOne: User = {
+const userOne: User = {
   account: 56,
   firstName: 'Иван',
-  LastName: 'Лёша',
+  lastName: 'Кошкин',
 };
 
-const userStoryTwo: User = {
+const userTwo: User = {
   account: 23,
 };
 
-const printReport = ({firstName = 'Дима', LastName = 'Жора'}: User, amount: number) => {
-  console.log(`${firstName} переводит ${amount} кокосовых скорлупок пользователю ${LastName}`);
+const printReport = ({firstName: nameFirstUser = 'Семён', account: scoreFirstUser = 50}: User = userOne, amount: number, {firstName: nameSecondUser = 'Дима', account: scoreSecondUser = 10}: User = userTwo) => {
+  console.log(`${nameFirstUser} ${scoreFirstUser} переводит ${amount} кокосовых скорлупок пользователю ${nameSecondUser} ${scoreSecondUser}`);
 };
 
-printReport(userStoryOne, 28);
-printReport(userStoryTwo, 45);
+printReport(userOne, 28, userTwo);
